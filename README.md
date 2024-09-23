@@ -1,0 +1,1 @@
+Fitness App, simplicity of use, for users with less time to set everything, target beginners, people with first steps into exercise, focusing on motivation.
