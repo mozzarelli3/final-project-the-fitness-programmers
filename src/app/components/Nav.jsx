@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Dumbbell, Home, Calendar, Apple, User, Menu, X } from 'lucide-react';
+import { Dumbbell, Home, User, Menu, X } from 'lucide-react';
 
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,20 +35,6 @@ export default function Nav() {
             >
               <Dumbbell className='h-5 w-5 inline-block mr-1' />
               Workouts
-            </Link>
-            <Link
-              href='/schedule'
-              className='py-4 px-2 text-white hover:text-green-200 transition duration-300'
-            >
-              <Calendar className='h-5 w-5 inline-block mr-1' />
-              Schedule
-            </Link>
-            <Link
-              href='/nutrition'
-              className='py-4 px-2 text-white hover:text-green-200 transition duration-300'
-            >
-              <Apple className='h-5 w-5 inline-block mr-1' />
-              Nutrition
             </Link>
             <Link
               href='/profile'
