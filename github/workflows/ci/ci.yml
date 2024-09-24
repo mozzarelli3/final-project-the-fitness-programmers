@@ -7,7 +7,7 @@ on:
     types: [opened, synchronize] # The workflow runs on newly opened PRs and when PRs are updated
 
 jobs:
-  automation: # Name of the job
+  automation-checks: # Name of the job
     runs-on: ubuntu-latest # the job will run on the latest version of the Ubuntu runner
 
     steps:
