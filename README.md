@@ -7,6 +7,15 @@ User needs:
 - people with first steps into exercise
 - focusing on motivation.
 
+MVP:
+- Track workouts/duration
+- Track nutrition water
+- Weekly summary (calories burned, etc.)
+- TDEE calculator
+- Setting target weight with progress tracking/lose 5kg in 2 months
+- Log in
+
+
 
 Potential features:
 - Track workouts/duration
