@@ -1,0 +1,30 @@
+name: Docker Build & Run # Defines the name of the GitHub Action workflow
+
+on:
+  pull_request:
+    branches:
+      - main # Triggers this workflow when a pull request targets the "main" branch
+    types: [opened, synchronize] # The workflow runs on newly opened PRs and when PRs are updated
+
+jobs:
+  build-lint-format-and-test: # Name of the job
+    runs-on: ubuntu-latest # the job will run on the latest version of the Ubuntu runner
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3 # Checks out the repository's code so it can be accessed by next steps
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2 # Sets up Docker Buildx, which is used for building multi-platform Docker images
+
+      - name: Build Docker image
+        run: docker build -t my-dev-image -f Dockerfile.prod . # Builds the Docker image "my-dev-image" using the Dockerfile in the root of the repository
+
+      - name: Run format
+        run: docker run --rm my-dev-image npm run format # Runs the "npm run format" command inside the Docker container to format the code
+
+      - name: Run lint
+        run: docker run --rm my-dev-image npm run lint # Runs the "npm run lint" command inside the Docker container to check for linting issues
+
+      - name: Run test
+        run: docker run --rm my-dev-image npm run test # Runs the "npm run lint" command inside the Docker container to check for linting issues
