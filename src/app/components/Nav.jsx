@@ -37,7 +37,7 @@ export default function Nav() {
               Workouts
             </Link>
             <Link
-              href='/login'
+              href='/auth/login'
               className='py-4 px-2 text-white hover:text-green-200 transition duration-300'
             >
               <User className='h-5 w-5 inline-block mr-1' />
@@ -73,10 +73,10 @@ export default function Nav() {
             Workouts
           </Link>
           <Link
-            href='/profile'
+            href='/auth/login'
             className='block py-2 px-4 text-sm text-white hover:bg-green-700'
           >
-            Profile
+            Sign in
           </Link>
         </div>
       )}
