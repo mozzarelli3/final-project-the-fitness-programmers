@@ -4,11 +4,13 @@ on:
   pull_request:
     branches:
       - main # Triggers this workflow when a pull request targets the "main" branch
-    types: [opened, synchronize] # The workflow runs on newly opened PRs and when PRs are updated
+    types:
+      - opened
+      - synchronize # The workflow runs on newly opened PRs and when PRs are updated
 
 jobs:
-  automation-checks: # Name of the job
-    runs-on: ubuntu-latest # the job will run on the latest version of the Ubuntu runner
+  automation-checks-for-deployment: # Name of the job
+    runs-on: ubuntu-latest # The job will run on the latest version of the Ubuntu runner
 
     steps:
       - name: Checkout code
