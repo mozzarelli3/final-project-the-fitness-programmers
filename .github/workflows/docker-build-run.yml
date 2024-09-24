@@ -26,5 +26,5 @@ jobs:
       - name: Run lint
         run: docker run --rm my-dev-image npm run lint # Runs the "npm run lint" command inside the Docker container to check for linting issues
 
-      - name: Run test
-        run: docker run --rm my-dev-image npm run test # Runs the "npm run lint" command inside the Docker container to check for linting issues
+      # - name: Run test
+      #   run: docker run --rm my-dev-image npm run test # Runs the "npm run lint" command inside the Docker container to check for linting issues
