@@ -37,11 +37,11 @@ export default function Nav() {
               Workouts
             </Link>
             <Link
-              href='/profile'
+              href='/login'
               className='py-4 px-2 text-white hover:text-green-200 transition duration-300'
             >
               <User className='h-5 w-5 inline-block mr-1' />
-              Profile
+              Sign in
             </Link>
           </div>
           <div className='md:hidden flex items-center'>
