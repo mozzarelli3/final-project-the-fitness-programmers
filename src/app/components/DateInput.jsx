@@ -18,7 +18,6 @@ function DateInput({ label, onDateChange }) {
         value={selectedDate}
         onChange={handleDateChange}
       />
-      {selectedDate && <p>You selected: {selectedDate}</p>}
     </div>
   );
 }

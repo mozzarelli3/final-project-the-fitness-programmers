@@ -18,7 +18,7 @@ function DropdownMenu({ label, options }) {
           </option>
         ))}
       </select>
-      {selectedOption && <p>You selected: {selectedOption}</p>}
+      
     </div>
   );
 }
